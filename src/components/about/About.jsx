@@ -11,13 +11,15 @@ const About = () => {
     <motion.div
       initial="hide"
       animate="show"
-      // transition={{ duration: 3 }}
-      // exit={{ x: 200, transition: { duration: 10 } }}
+      exit="exit"
       variants={about_container}
       className="flex flex-col normal-pad md:flex-row md:items-center md:justify-center md:gap-x-8"
     >
       <div className="md:order-2">
-        <motion.h1 variants={title_variant} className="text-[40px] md:text-[100px] font-bold font-work_sans_sm p-0 mt-4 md:mt-0">
+        <motion.h1
+          variants={title_variant}
+          className="text-[40px] md:text-[100px] font-bold font-work_sans_sm p-0 mt-4 md:mt-0"
+        >
           Hello
         </motion.h1>
 

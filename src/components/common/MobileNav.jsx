@@ -4,11 +4,12 @@ import MenuIcon from "../../assets/icons/menu";
 import Btn from "./Btn";
 import { mobile_nav_variant } from "../../constants/variants";
 import { AnimatePresence, motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const listItemVariant = {
   show: { y: 0, opacity: 1 },
   hide: { y: -20, opacity: 0 },
-  exit: {y: 20, opacity: 0}
+  exit: { y: 20, opacity: 0 },
 };
 
 const MobileNav = () => {
@@ -54,15 +55,30 @@ const MobileNav = () => {
               }}
               className="text-[22px] font-avenir"
             >
-              <motion.li variants={listItemVariant} className="h-14">
-                Resume
+              <motion.li
+                variants={listItemVariant}
+                className="h-14"
+                onClick={() => setNavOpen(false)}
+              >
+                <Link to="/resume">Resume</Link>
               </motion.li>
-              <motion.li variants={listItemVariant} className="h-14">
-                Projects
+              
+              <motion.li
+                variants={listItemVariant}
+                className="h-14"
+                onClick={() => setNavOpen(false)}
+              >
+                <Link to="/projects">Projects</Link>
               </motion.li>
-              <motion.li variants={listItemVariant} className="h-14">
-                Contact
+              
+              <motion.li
+                variants={listItemVariant}
+                className="h-14"
+                onClick={() => setNavOpen(false)}
+              >
+                <Link to="/contacts">Contact</Link>
               </motion.li>
+              
             </motion.ul>
           </CustomModal>
         )}
