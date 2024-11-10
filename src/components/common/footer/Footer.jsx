@@ -4,8 +4,8 @@ import { FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="py-5 border md:pt-10 md:pb-20 md:flex-apart normal-pad">
-      <div className="flex flex-col justify-between flex-1 border md:items-center md:flex-row gap-y-5">
+    <footer className="md:pt-10 md:pb-20 md:flex-apart normal-pad md:h-[183px]">
+      <div className="flex flex-col justify-between flex-1 px-4 py-5 border-t md:items-center md:flex-row gap-y-5">
         <HeadDesc
           title="Phone"
           titleStyle="text-[17px] font-work_sans_sm"

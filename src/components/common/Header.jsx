@@ -9,15 +9,15 @@ import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="h-[83px] flex items-center normal-pad border">
-      <div className="w-full border-2 flex-apart">
+    <header className="h-[83px] flex items-center normal-pad">
+      <div className="w-full flex-apart">
         <div className="flex-apart gap-x-2">
           <Link to="/">
             <IconWrapper containerStyle="size-[25px] border bg-[var(--orange)] rounded-full" />
           </Link>
 
           <h2 className="text-[21px] font-work_sans_sm">
-            Nicol Rider <span className="text-base font-avenir">Dev</span>
+            Doris <span className="text-base font-avenir">Dev</span>
           </h2>
         </div>
 

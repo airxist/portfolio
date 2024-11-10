@@ -27,7 +27,7 @@
 
 
 .normal-pad {
-  @apply px-2 md:px-[7.5rem]
+  @apply px-2 md:px-10
 }
 
 .lead-btn {
