@@ -1,11 +1,12 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const Btn = ({ styling, text, icon: Icon }) => {
+const Btn = ({ styling, text, icon: Icon, variants, ...props }) => {
   return (
-    <button className={styling}>
-      {Icon && Icon }
+    <motion.button variants={variants} className={styling} {...props}>
+      {Icon && Icon}
       {text && text}
-    </button>
+    </motion.button>
   );
 };
 

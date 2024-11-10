@@ -7,6 +7,7 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import Anime from './components/anime/Anime'
 
 const App = () => {
   const location = useLocation();
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/contacts" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/anime" element={<Anime />} />
         </Routes>
       </AnimatePresence>
       <Footer />

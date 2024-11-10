@@ -1,11 +1,19 @@
 import React from "react";
+import { motion } from "framer-motion";
 
-const HeadDesc = ({ title, titleStyle, desc, descStyle, containerStyle }) => {
+const HeadDesc = ({
+  title,
+  titleStyle,
+  desc,
+  descStyle,
+  containerStyle,
+  ...props
+}) => {
   return (
-    <div className={containerStyle}>
+    <motion.div className={containerStyle} {...props}>
       <h2 className={titleStyle}>{title}</h2>
       <p className={descStyle}>{desc}</p>
-    </div>
+    </motion.div>
   );
 };
 

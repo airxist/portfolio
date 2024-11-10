@@ -3,23 +3,25 @@ import { FaHamburger } from "react-icons/fa";
 import IconWrapper from "./IconWrapper";
 import Btn from "./Btn";
 import Nav from "./Nav";
+import { Link } from "react-router-dom";
+import MenuIcon from "../../assets/icons/menu";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
   return (
-    <header className="h-[83px] flex-join px-4">
-      <div className="w-full flex-apart">
-        <div className="flex-apart gap-x-4">
-          <IconWrapper containerStyle="size-[25px] border bg-orange-500 rounded-full" />
+    <header className="h-[83px] flex items-center normal-pad border">
+      <div className="w-full border-2 flex-apart">
+        <div className="flex-apart gap-x-2">
+          <Link to="/">
+            <IconWrapper containerStyle="size-[25px] border bg-[var(--orange)] rounded-full" />
+          </Link>
 
-          <h2 className="text-2xl font-work_sans_sm">
-            Airxistence <span className="text-base font-avenir">Dev</span>
+          <h2 className="text-[21px] font-work_sans_sm">
+            Nicol Rider <span className="text-base font-avenir">Dev</span>
           </h2>
         </div>
 
-        <Btn
-          icon={<FaHamburger width={22} height={20} />}
-          styling="md:hidden"
-        />
+        <MobileNav />
 
         <Nav />
       </div>

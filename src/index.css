@@ -11,7 +11,9 @@
   font-family: work-sans;
   src: url('./assets/font/WorkSans-SemiBold.ttf');
 }
-
+:root {
+  --orange: rgb(238, 163, 2)
+}
 @layer utilities {
   .flex-join {
     @apply flex items-center justify-center;
@@ -22,10 +24,16 @@
   }
 }
 
+
+
 .normal-pad {
-  @apply px-4 md:px-[7.5rem];
+  @apply px-2 md:px-[7.5rem]
 }
 
 .lead-btn {
-  @apply size-[83px] md:size-[140px] rounded-full flex-join border border-black font-medium text-sm md:text-[22px];
+  @apply size-[83px] md:size-[140px] rounded-full flex-join border border-black font-work_sans_sm text-sm md:text-[22px];
+}
+
+.menu-span {
+  @apply w-full h-0.5 bg-black block origin-right
 }
