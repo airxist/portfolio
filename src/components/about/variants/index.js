@@ -1,10 +1,23 @@
 export const about_container = {
   show: {
     opacity: 1,
-    transition: { when: "beforeChildren", staggerChildren: 0.2 },
+    x: 0,
+    transition: {
+      when: "beforeChildren",
+      staggerChildren: 0.2,
+      duration: 0.3,
+    },
   },
-  hide: { opacity: 0 },
-  exit: { x: -200 },
+  hide: {
+    x: 200,
+    opacity: 0,
+  },
+  exit: {
+    x: -200,
+    transition: {
+      duration: 0.25,
+    },
+  },
 };
 
 export const title_variant = {

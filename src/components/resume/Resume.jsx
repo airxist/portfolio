@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 const Resume = () => {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 3 }}
-      exit={{ x: 200}}
+      initial={{ opacity: 0, x: '100%' }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.34 }}
+      exit={{ x: "-100%"}}
     >
       <h2 className="text-[27px] md:text-[42px] font-bold">Resume</h2>
 

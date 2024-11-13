@@ -12,7 +12,7 @@ import Anime from './components/anime/Anime'
 const App = () => {
   const location = useLocation();
   return (
-    <>
+    <div className="overflow-x-hidden max-w-screen-2xl">
       <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
@@ -24,7 +24,7 @@ const App = () => {
         </Routes>
       </AnimatePresence>
       <Footer />
-    </>
+    </div>
   );
 };
 

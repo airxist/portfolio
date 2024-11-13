@@ -13,22 +13,22 @@ const About = () => {
       animate="show"
       exit="exit"
       variants={about_container}
-      className="flex flex-col normal-pad md:flex-row md:items-center md:justify-center md:gap-x-8"
+      className="flex flex-col pb-10 normal-pad md:flex-row md:items-center md:justify-center md:gap-x-8"
     >
       <div className="md:order-2">
         <motion.h1
           variants={title_variant}
-          className="text-[40px] md:text-[100px] font-bold font-work_sans_sm p-0 mt-4 md:mt-0"
+          className="text-[40px] md:text-[100px] font-work_sans_sm p-0 mt-3 md:mt-0"
         >
           Hello
         </motion.h1>
 
         <HeadDesc
-          containerStyle="w-full max-w-[371px] mt-4"
+          containerStyle="w-full max-w-[371px]"
           title={about_title}
-          titleStyle="capitalize font-semibold text-xl md:text-[22px] font-work_sans_sm"
+          titleStyle="capitalize text-xl md:text-[22px] font-work_sans_sm"
           desc={about_desc}
-          descStyle="mt-3"
+          descStyle="mt-1 font-avenir"
           variants={title_variant}
         />
 
@@ -36,7 +36,7 @@ const About = () => {
       </div>
 
       <IconWrapper
-        containerStyle="border-2 w-full max-w-[480px] rounded-full aspect-square mt-6 md:order-1 overflow-hidden"
+        containerStyle="w-full max-w-[480px] rounded-full aspect-square md:order-1 overflow-hidden shadow-lg shadow-neutral-500"
         imageUrl="/placeholder.jpg"
       />
     </motion.div>

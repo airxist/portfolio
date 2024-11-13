@@ -4,15 +4,15 @@
 
 @font-face {
   font-family: avenir;
-  src: url('./assets/font/avenir-lt.otf');
+  src: url("./assets/font/avenir-lt.otf");
 }
 
 @font-face {
   font-family: work-sans;
-  src: url('./assets/font/WorkSans-SemiBold.ttf');
+  src: url("./assets/font/WorkSans-SemiBold.ttf");
 }
 :root {
-  --orange: rgb(238, 163, 2)
+  --orange: rgb(238, 163, 2);
 }
 @layer utilities {
   .flex-join {
@@ -24,16 +24,14 @@
   }
 }
 
-
-
 .normal-pad {
-  @apply px-2 md:px-10
+  @apply px-2 md:px-10;
 }
 
 .lead-btn {
-  @apply size-[83px] md:size-[140px] rounded-full flex-join border border-black font-work_sans_sm text-sm md:text-[22px];
+  @apply w-[calc(100%/3.2)] max-w-[140px] aspect-square rounded-full flex-join border border-black font-work_sans_sm text-[15px] lg:text-[22px];
 }
 
 .menu-span {
-  @apply w-full h-0.5 bg-black block origin-right
+  @apply w-full h-0.5 bg-black block origin-right;
 }
