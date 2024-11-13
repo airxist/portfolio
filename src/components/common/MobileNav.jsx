@@ -5,6 +5,7 @@ import Btn from "./Btn";
 import { mobile_nav_variant } from "../../constants/variants";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { LockScroll, UnlockScroll } from "../../lib/utils/scroll-lock";
 
 const listItemVariant = {
   show: { y: 0, opacity: 1 },
@@ -20,9 +21,12 @@ const MobileNav = () => {
       <Btn
         icon={<MenuIcon />}
         styling="md:hidden"
-        onClick={() => setNavOpen((prev) => !prev)}
+        onClick={() => {
+          LockScroll();
+          setNavOpen((prev) => !prev);
+        }}
       />
-      
+
       <AnimatePresence>
         {isNavOpen && (
           <CustomModal
@@ -32,7 +36,10 @@ const MobileNav = () => {
             variants={mobile_nav_variant}
             isModalOpen={isNavOpen}
             className="fixed top-0 left-0 z-50 w-full h-full bg-neutral-50 flex-join"
-            closeModal={() => setNavOpen(false)}
+            closeModal={() => {
+              UnlockScroll();
+              setNavOpen(false);
+            }}
           >
             <motion.ul
               variants={{
@@ -63,7 +70,7 @@ const MobileNav = () => {
               >
                 <Link to="/resume">Resume</Link>
               </motion.li>
-              
+
               <motion.li
                 variants={listItemVariant}
                 className="h-14"
@@ -71,7 +78,7 @@ const MobileNav = () => {
               >
                 <Link to="/projects">Projects</Link>
               </motion.li>
-              
+
               <motion.li
                 variants={listItemVariant}
                 className="h-14"
@@ -79,7 +86,6 @@ const MobileNav = () => {
               >
                 <Link to="/contacts">Contact</Link>
               </motion.li>
-              
             </motion.ul>
           </CustomModal>
         )}
