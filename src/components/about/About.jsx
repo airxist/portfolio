@@ -13,9 +13,9 @@ const About = () => {
       animate="show"
       exit="exit"
       variants={about_container}
-      className="flex flex-col pb-10 normal-pad md:flex-row md:items-center md:justify-center md:gap-x-8"
+      className="flex flex-col pb-10 md:pb-0 normal-pad md:flex-row md:items-center md:justify-center md:gap-x-8 h-[799px]"
     >
-      <div className="md:order-2">
+      <div className="w-full max-w-[450px] md:order-2">
         <motion.h1
           variants={title_variant}
           className="text-[40px] md:text-[100px] font-work_sans_sm p-0 mt-3 md:mt-0"
@@ -35,10 +35,16 @@ const About = () => {
         <LeadMe />
       </div>
 
-      <IconWrapper
-        containerStyle="w-full max-w-[480px] rounded-full aspect-square md:order-1 overflow-hidden shadow-lg shadow-neutral-500"
-        imageUrl="/placeholder.jpg"
-      />
+      <motion.div
+        initial={{ y: 100 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <IconWrapper
+          containerStyle="w-full md:w-[480px] rounded-full aspect-square md:order-1 overflow-hidden shadow-lg shadow-neutral-500"
+          imageUrl="/placeholder.jpg"
+        />
+      </motion.div>
     </motion.div>
   );
 };

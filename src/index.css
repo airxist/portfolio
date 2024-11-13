@@ -13,6 +13,7 @@
 }
 :root {
   --orange: rgb(238, 163, 2);
+  --soft-red: rgb(255,59,37);
 }
 @layer utilities {
   .flex-join {
@@ -24,12 +25,16 @@
   }
 }
 
+body {
+  @apply bg-gray-400/10
+}
+
 .normal-pad {
-  @apply px-2 md:px-10;
+  @apply px-4 md:px-10;
 }
 
 .lead-btn {
-  @apply w-[calc(100%/3.2)] max-w-[140px] aspect-square rounded-full flex-join border border-black font-work_sans_sm text-[15px] lg:text-[22px];
+  @apply w-[calc(100%/3.2)] max-w-[140px] aspect-square rounded-full flex-join border font-work_sans_sm text-[15px] lg:text-[22px];
 }
 
 .menu-span {

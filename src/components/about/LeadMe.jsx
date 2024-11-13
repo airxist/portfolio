@@ -30,7 +30,7 @@ const LeadMe = () => {
       initial="hide"
       animate={isAnimating ? "show" : "hide"}
       variants={container_variant}
-      className="my-4 border flex-apart md:gap-x-6"
+      className="my-4 flex-apart md:gap-x-6"
       onViewportEnter={() => setAnimating(true)}
       // onViewportLeave={() => setAnimating(false)}
     >
@@ -43,7 +43,7 @@ const LeadMe = () => {
       <Btn
         text="Projects"
         variants={btn_variants}
-        styling="lead-btn bg-red-600"
+        styling="lead-btn bg-[var(--soft-red)]"
       />
       
       <Btn

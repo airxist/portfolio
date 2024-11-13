@@ -22,6 +22,7 @@ const MobileNav = () => {
         styling="md:hidden"
         onClick={() => setNavOpen((prev) => !prev)}
       />
+      
       <AnimatePresence>
         {isNavOpen && (
           <CustomModal
@@ -53,7 +54,7 @@ const MobileNav = () => {
                   },
                 },
               }}
-              className="text-[22px] font-avenir"
+              className="text-2xl font-avenir"
             >
               <motion.li
                 variants={listItemVariant}
