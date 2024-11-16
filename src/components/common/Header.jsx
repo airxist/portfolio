@@ -16,8 +16,8 @@ const Header = () => {
             <IconWrapper containerStyle="size-[25px] border bg-[var(--orange)] rounded-full" />
           </Link>
 
-          <h2 className="text-[21px] font-work_sans_sm">
-            Doris <span className="text-base font-avenir">Dev</span>
+          <h2 className="text-[21px] font-work_sans_sm text-title">
+            Doris <span className="text-base font-avenir text-secondary_text">Dev</span>
           </h2>
         </div>
 
