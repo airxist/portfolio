@@ -7,20 +7,19 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
-import Anime from './components/anime/Anime'
+import Anime from "./components/anime/Anime";
 
 const App = () => {
   const location = useLocation();
   return (
-    <div className="overflow-x-hidden max-w-screen-2xl">
+    <div className="mx-auto overflow-x-hidden max-w-screen-2xl">
       <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
           <Route path="/" element={<About />} />
-          <Route path="/contacts" element={<Contact />} />
           <Route path="/resume" element={<Resume />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/anime" element={<Anime />} />
+          <Route path="/contacts" element={<Contact />} />
         </Routes>
       </AnimatePresence>
       <Footer />

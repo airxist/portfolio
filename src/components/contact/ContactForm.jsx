@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import InputField from "./InputField";
 import Btn from "../common/Btn";
+import { motion } from "framer-motion";
+import { title_variant } from "../../constants/variants";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -14,7 +16,8 @@ const ContactForm = () => {
     e.preventDefault();
   };
   return (
-    <form
+    <motion.form
+      variants={title_variant}
       onSubmit={handleSubmit}
       className="px-6 mt-8 space-y-4 w-full max-w-[431px]"
     >
@@ -83,12 +86,12 @@ const ContactForm = () => {
         }
         placeholder="Enter your message"
       />
-      
+
       <Btn
         text="Submit"
         styling="border-2 border-black w-full bg-[var(--orange)] h-12 rounded-full text-xl md:text-2xl font-work_sans_sm hover:bg-transparent transition duration-1000 text-white hover:text-black"
       />
-    </form>
+    </motion.form>
   );
 };
 

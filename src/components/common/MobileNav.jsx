@@ -16,30 +16,30 @@ const listItemVariant = {
 const MobileNav = () => {
   const [isNavOpen, setNavOpen] = useState(false);
 
+  const openNav = () => {
+    LockScroll();
+    setNavOpen(true);
+  };
+
+  const closeNav = () => {
+    UnlockScroll();
+    setNavOpen(false);
+  };
+
   return (
     <nav>
-      <Btn
-        icon={<MenuIcon />}
-        styling="md:hidden"
-        onClick={() => {
-          LockScroll();
-          setNavOpen((prev) => !prev);
-        }}
-      />
+      <Btn icon={<MenuIcon />} styling="md:hidden" onClick={openNav} />
 
       <AnimatePresence>
         {isNavOpen && (
           <CustomModal
             initial="hide"
             animate="show"
-            exit="exit"
+            // exit="exit"
             variants={mobile_nav_variant}
             isModalOpen={isNavOpen}
-            className="fixed top-0 left-0 z-50 w-full h-full bg-neutral-50 flex-join"
-            closeModal={() => {
-              UnlockScroll();
-              setNavOpen(false);
-            }}
+            className="fixed top-0 left-0 z-50 w-full h-full bg-background flex-join"
+            closeModal={closeNav}
           >
             <motion.ul
               variants={{
@@ -65,24 +65,24 @@ const MobileNav = () => {
             >
               <motion.li
                 variants={listItemVariant}
-                className="h-14"
-                onClick={() => setNavOpen(false)}
+                className="h-14 text-link"
+                onClick={closeNav}
               >
                 <Link to="/resume">Resume</Link>
               </motion.li>
 
               <motion.li
                 variants={listItemVariant}
-                className="h-14"
-                onClick={() => setNavOpen(false)}
+                className="h-14 text-link"
+                onClick={closeNav}
               >
                 <Link to="/projects">Projects</Link>
               </motion.li>
 
               <motion.li
                 variants={listItemVariant}
-                className="h-14"
-                onClick={() => setNavOpen(false)}
+                className="h-14 text-link"
+                onClick={closeNav}
               >
                 <Link to="/contacts">Contact</Link>
               </motion.li>

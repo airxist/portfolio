@@ -11,8 +11,8 @@ const HeadDesc = ({
 }) => {
   return (
     <motion.div className={containerStyle} {...props}>
-      <h2 className={titleStyle}>{title}</h2>
-      <p className={descStyle}>{desc}</p>
+      <h2 className={`text-title ${titleStyle}`}>{title}</h2>
+      <p className={`text-secondary_text ${descStyle}`}>{desc}</p>
     </motion.div>
   );
 };

@@ -6,21 +6,25 @@ import {
   skillsAndExpertise,
   workExperiences,
 } from "../../constants";
+import { section_container, title_variant } from "../../constants/variants";
 
 const Resume = () => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: "100%" }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.34 }}
-      exit={{ x: "-100%" }}
+      variants={section_container}
+      initial="hide"
+      animate="show"
+      exit="exit"
       className="pb-10 normal-pad lg:py-32 lg:px-[7.5rem]"
     >
-      <h2 className="text-[27px] md:text-[42px] font-work_sans_sm">
+      <motion.h2
+        variants={title_variant}
+        className="text-[27px] md:text-[42px] font-work_sans_sm text-title"
+      >
         Resume
-      </h2>
+      </motion.h2>
 
-      <div className="divide-y">
+      <motion.div className="divide-y">
         <ResumeBlock
           label="Work Experience"
           resumeBlockData={workExperiences}
@@ -33,7 +37,7 @@ const Resume = () => {
           resumeBlockData={skillsAndExpertise.slice(0, 5)}
           type="sentence"
         />
-      </div>
+      </motion.div>
     </motion.div>
   );
 };

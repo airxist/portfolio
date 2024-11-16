@@ -1,14 +1,22 @@
 import React from "react";
 import ResumeDescription from "./ResumeDescription";
+import { motion } from "framer-motion";
+import { resumeBlockVariant, title_variant } from "../../constants/variants";
 
 const ResumeBlock = ({ label, resumeBlockData = [], type }) => {
   return (
-    <div className="items-start pt-8 md:flex">
-      <p className="flex-1 mb-8 text-xl md:text-2xl font-work_sans_sm">
+    <motion.div
+      variants={resumeBlockVariant}
+      className="items-start pt-8 md:flex"
+    >
+      <motion.h2
+        variants={title_variant}
+        className="flex-1 mb-8 text-xl md:text-2xl font-work_sans_sm text-title"
+      >
         {label}
-      </p>
+      </motion.h2>
 
-      <div className="flex-1 ">
+      <motion.div className="flex-1 ">
         {resumeBlockData.length === 0 ? (
           <>no data currently</>
         ) : (
@@ -30,8 +38,8 @@ const ResumeBlock = ({ label, resumeBlockData = [], type }) => {
             )}
           </>
         )}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

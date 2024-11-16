@@ -12,6 +12,10 @@ const btn_variants = {
     scale: 1,
     transition: { type: "spring", duration: 1 },
   },
+  exit: {
+    opacity: 0,
+    scale: 0,
+  },
 };
 
 const container_variant = {
@@ -21,32 +25,38 @@ const container_variant = {
     opacity: 1,
     transition: { duration: 1, when: "beforeChildren", staggerChildren: 0.15 },
   },
+  exit: {
+    scale: 0,
+    transition: { when: "afterChildren", staggerChildren: 0.15 },
+  },
 };
 
 const LeadMe = () => {
-  const [isAnimating, setAnimating] = useState(false);
   return (
     <motion.div
       initial="hide"
-      animate={isAnimating ? "show" : "hide"}
+      animate="show"
+      exit="exit"
       variants={container_variant}
       className="my-4 flex-apart md:gap-x-6"
-      onViewportEnter={() => setAnimating(true)}
       // onViewportLeave={() => setAnimating(false)}
     >
       <Btn
+        href="/resume"
         text="Resume"
         styling="lead-btn bg-[var(--orange)]"
         variants={btn_variants}
       />
-      
+
       <Btn
+        href="/projects"
         text="Projects"
         variants={btn_variants}
         styling="lead-btn bg-[var(--soft-red)]"
       />
-      
+
       <Btn
+        href="/contact"
         text="Contact"
         variants={btn_variants}
         styling="lead-btn bg-blue-400"

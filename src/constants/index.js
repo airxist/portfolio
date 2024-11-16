@@ -1,3 +1,22 @@
+import gmail from "../assets/icons/gmail.svg";
+import ig from "../assets/icons/instagram_light.svg";
+import linkedIn from "../assets/icons/linkedin.svg";
+import twitter from "../assets/icons/twitter.svg";
+
+export const icons = {
+  gmail,
+  ig,
+  linkedIn,
+  twitter,
+};
+
+export const socialLinks = [
+  { href: "mailto:", icon: icons.gmail },
+  { href: "http://instagram", icon: icons.ig },
+  { href: "http://linkedIn", icon: icons.linkedIn },
+  { href: "http://x", icon: icons.twitter },
+];
+
 export const about_title = "A Bit About Me";
 
 export const about_desc =
@@ -27,29 +46,31 @@ export const workExperiences = [
   },
 ];
 
-
 export const education = [
   {
     startDate: "2010",
     endDate: "2014",
     degreeName: "Bachelor of Science in Computer Science",
     establishment: "Massachusetts Institute of Technology (MIT)",
-    description: "A rigorous program that provided a strong foundation in computer science principles, including algorithms, data structures, software engineering, and artificial intelligence. Students engaged in hands-on projects and research opportunities, preparing them for careers in technology and innovation."
+    description:
+      "A rigorous program that provided a strong foundation in computer science principles, including algorithms, data structures, software engineering, and artificial intelligence. Students engaged in hands-on projects and research opportunities, preparing them for careers in technology and innovation.",
   },
   {
     startDate: "2015",
     endDate: "2017",
     degreeName: "Master of Business Administration (MBA)",
     establishment: "Harvard Business School",
-    description: "A comprehensive program focused on leadership, strategic thinking, and business management. The curriculum included case studies, group projects, and practical experiences, equipping graduates with the skills needed to excel in various business environments and leadership roles."
+    description:
+      "A comprehensive program focused on leadership, strategic thinking, and business management. The curriculum included case studies, group projects, and practical experiences, equipping graduates with the skills needed to excel in various business environments and leadership roles.",
   },
   {
     startDate: "2018",
     endDate: "2021",
     degreeName: "Doctor of Philosophy in Environmental Science",
     establishment: "Stanford University",
-    description: "An advanced research degree centered on the study of environmental systems, sustainability, and climate change. The program emphasized interdisciplinary approaches, combining elements of biology, chemistry, and policy studies to address complex environmental challenges."
-  }
+    description:
+      "An advanced research degree centered on the study of environmental systems, sustainability, and climate change. The program emphasized interdisciplinary approaches, combining elements of biology, chemistry, and policy studies to address complex environmental challenges.",
+  },
 ];
 
 export const skillsAndExpertise = [
@@ -67,25 +88,29 @@ export const skillsAndExpertise = [
   "API Development",
   "Agile Methodologies",
   "Problem Solving",
-  "Technical Writing"
+  "Technical Writing",
 ];
 
 export const mockProjects = [
   {
     projectTitle: "Smart Home Automation System",
-    projectDescription: "A comprehensive system to automate home appliances and security using IoT technology. This project integrates voice control, remote monitoring, and automated scheduling to enhance convenience and security.",
-    imageUrl: "https://static.wixstatic.com/media/c837a6_871a4251d9874b0d8acfe66796caaaf8~mv2.jpg/v1/fill/w_491,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/brendan-church-9F3sEV1-Iog-unsplash.jpg"
+    projectDescription:
+      "A comprehensive system to automate home appliances and security using IoT technology. This project integrates voice control, remote monitoring, and automated scheduling to enhance convenience and security.",
+    imageUrl:
+      "https://static.wixstatic.com/media/c837a6_871a4251d9874b0d8acfe66796caaaf8~mv2.jpg/v1/fill/w_491,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/brendan-church-9F3sEV1-Iog-unsplash.jpg",
   },
   {
     projectTitle: "E-commerce Website",
-    projectDescription: "An online platform for buying and selling products. Features include product search, user reviews, secure payment gateways, and an intuitive user interface for a seamless shopping experience.",
-    imageUrl: "https://static.wixstatic.com/media/11062b_6ddd2b6a939949a0acd0df3847b896bc~mv2.jpg/v1/fill/w_490,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Fashion%20Magazine.jpg"
+    projectDescription:
+      "An online platform for buying and selling products. Features include product search, user reviews, secure payment gateways, and an intuitive user interface for a seamless shopping experience.",
+    imageUrl:
+      "https://static.wixstatic.com/media/11062b_6ddd2b6a939949a0acd0df3847b896bc~mv2.jpg/v1/fill/w_490,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Fashion%20Magazine.jpg",
   },
   {
     projectTitle: "Fitness Tracker App",
-    projectDescription: "A mobile application that helps users track their fitness activities, set goals, and monitor progress. Includes features like GPS tracking, workout logging, and social sharing to keep users motivated and connected.",
-    imageUrl: "https://static.wixstatic.com/media/8121cd0609b8412497001bae77b1af31.jpg/v1/fill/w_490,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/8121cd0609b8412497001bae77b1af31.jpg"
-  }
+    projectDescription:
+      "A mobile application that helps users track their fitness activities, set goals, and monitor progress. Includes features like GPS tracking, workout logging, and social sharing to keep users motivated and connected.",
+    imageUrl:
+      "https://static.wixstatic.com/media/8121cd0609b8412497001bae77b1af31.jpg/v1/fill/w_490,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/8121cd0609b8412497001bae77b1af31.jpg",
+  },
 ];
-
-

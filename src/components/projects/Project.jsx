@@ -1,6 +1,7 @@
 import React from "react";
 import HeadDesc from "../common/HeadDesc";
 import IconWrapper from "../common/IconWrapper";
+import { title_variant } from "../../constants/variants";
 
 const Project = ({
   projectTitle,
@@ -15,6 +16,7 @@ const Project = ({
         titleStyle="text-xl md:text-2xl font-work_sans_sm"
         desc={projectDescription}
         descStyle="font-avenir mt-2"
+        variants={title_variant}
       />
 
       <IconWrapper

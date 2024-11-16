@@ -1,5 +1,7 @@
 import React from "react";
 import HeadDesc from "../common/HeadDesc";
+import { motion } from "framer-motion";
+import { resumDescVarent } from "../../constants/variants";
 
 const ResumeDescription = ({
   startDate,
@@ -10,8 +12,11 @@ const ResumeDescription = ({
   establishment,
 }) => {
   return (
-    <div className="items-start mb-8 md:flex gap-x-4">
-      <div className="flex-1 text-nowrap font-avenir">
+    <motion.div
+      variants={resumDescVarent}
+      className="items-start mb-8 md:flex gap-x-4"
+    >
+      <div className="flex-1 text-nowrap font-avenir text-title">
         <span>{startDate}</span> - <span>{endDate}</span>
       </div>
 
@@ -21,7 +26,7 @@ const ResumeDescription = ({
         desc={description}
         descStyle="font-avenir mt-2 line-clamp-5"
       />
-    </div>
+    </motion.div>
   );
 };
 

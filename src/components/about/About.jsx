@@ -4,7 +4,7 @@ import LeadMe from "./LeadMe";
 import IconWrapper from "../common/IconWrapper";
 import { motion } from "framer-motion";
 import { about_desc, about_title } from "../../constants";
-import { about_container, title_variant } from "./variants";
+import { section_container, title_variant } from "../../constants/variants";
 
 const About = () => {
   return (
@@ -12,13 +12,13 @@ const About = () => {
       initial="hide"
       animate="show"
       exit="exit"
-      variants={about_container}
+      variants={section_container}
       className="flex flex-col pb-10 md:pb-0 normal-pad md:flex-row md:items-center md:justify-center md:gap-x-8 h-[799px]"
     >
       <div className="w-full max-w-[450px] md:order-2">
         <motion.h1
           variants={title_variant}
-          className="text-[40px] md:text-[100px] font-work_sans_sm p-0 mt-3 md:mt-0"
+          className="text-[40px] md:text-[100px] font-work_sans_sm p-0 mt-3 md:mt-0 drop-shadow-2xl text-title"
         >
           Hello
         </motion.h1>
