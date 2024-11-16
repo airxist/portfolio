@@ -1,5 +1,5 @@
 import gmail from "../assets/icons/gmail.svg";
-import ig from "../assets/icons/instagram_light.svg";
+import ig from "../assets/icons/ig.svg";
 import linkedIn from "../assets/icons/linkedin.svg";
 import twitter from "../assets/icons/twitter.svg";
 
