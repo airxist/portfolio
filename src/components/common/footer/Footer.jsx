@@ -1,6 +1,6 @@
 import React from "react";
 import HeadDesc from "../HeadDesc";
-import { icons, socialLinks } from "../../../constants";
+import { author } from "../../../constants";
 
 const Footer = () => {
   return (
@@ -12,7 +12,7 @@ const Footer = () => {
             href="mailto:"
             className="text-sm font-bold text-medium font-avenir text-link"
           >
-          0123456789
+            {author?.phone}
           </a>
         </div>
 
@@ -22,7 +22,7 @@ const Footer = () => {
             href="mailto:"
             className="text-sm font-bold text-medium font-avenir text-link"
           >
-            exampleemail@gmail.com
+            {author?.email}
           </a>
         </div>
 
@@ -33,7 +33,7 @@ const Footer = () => {
           />
 
           <div className="flex items-center gap-x-4">
-            {socialLinks.map((link) => {
+            {author?.socialLinks.map((link) => {
               return (
                 <a href={link.href}>
                   <img src={link.icon} alt={link.href} className="size-5" />

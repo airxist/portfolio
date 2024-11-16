@@ -1,11 +1,10 @@
 import React from "react";
-import { FaHamburger } from "react-icons/fa";
 import IconWrapper from "./IconWrapper";
 import Btn from "./Btn";
 import Nav from "./Nav";
 import { Link } from "react-router-dom";
-import MenuIcon from "../../assets/icons/menu";
 import MobileNav from "./MobileNav";
+import { author } from "../../constants";
 
 const Header = () => {
   return (
@@ -17,7 +16,10 @@ const Header = () => {
           </Link>
 
           <h2 className="text-[21px] font-work_sans_sm text-title">
-            Doris <span className="text-base font-avenir text-secondary_text">Dev</span>
+            {author?.name}{" "}
+            <span className="text-base font-avenir text-secondary_text">
+              {author?.career}
+            </span>
           </h2>
         </div>
 

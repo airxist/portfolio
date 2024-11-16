@@ -3,10 +3,18 @@ import HeadDesc from "../common/HeadDesc";
 import LeadMe from "./LeadMe";
 import IconWrapper from "../common/IconWrapper";
 import { motion } from "framer-motion";
-import { about_desc, about_title } from "../../constants";
+import { about_desc, about_title, welcomeText } from "../../constants";
 import { section_container, title_variant } from "../../constants/variants";
+import { TypewriterEffect } from "../_ui/typewriter-effect";
 
 const About = () => {
+  const words = [
+    {
+      text: "Hello",
+      className: "text-[40px] md:text-[100px]",
+    },
+  ];
+
   return (
     <motion.div
       initial="hide"
@@ -16,12 +24,12 @@ const About = () => {
       className="flex flex-col pb-10 md:pb-0 normal-pad md:flex-row md:items-center md:justify-center md:gap-x-8 h-[799px]"
     >
       <div className="w-full max-w-[450px] md:order-2">
-        <motion.h1
+        <TypewriterEffect
           variants={title_variant}
-          className="text-[40px] md:text-[100px] font-work_sans_sm p-0 mt-3 md:mt-0 drop-shadow-2xl text-title"
-        >
-          Hello
-        </motion.h1>
+          words={words}
+          className="p-0 mt-3 font-work_sans_sm md:mt-0 drop-shadow-2xl text-title text-start"
+          cursorClassName="h-8 lg:h-20"
+        />
 
         <HeadDesc
           containerStyle="w-full max-w-[371px]"

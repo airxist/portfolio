@@ -24,12 +24,18 @@ export const icons = {
   cld,
 };
 
-export const socialLinks = [
-  { href: "mailto:", icon: icons.gmail },
-  { href: "http://instagram", icon: icons.ig },
-  { href: "http://linkedIn", icon: icons.linkedIn },
-  { href: "http://x", icon: icons.twitter },
-];
+export const author = {
+  name: "Doris D.",
+  career: "Software Dev",
+  email: "Doris@gmail.com",
+  phone: "08167504874",
+  socialLinks: [
+    { href: `mailto:Doris@gmail.com`, icon: icons.gmail },
+    { href: "http://instagram.com", icon: icons.ig },
+    { href: "http://linkedin.com", icon: icons.linkedIn },
+    { href: "http://twitter.com", icon: icons.twitter },
+  ],
+};
 
 export const welcomeText = "Hello";
 
@@ -130,6 +136,6 @@ export const mockProjects = [
       "A mobile application that helps users track their fitness activities, set goals, and monitor progress. Includes features like GPS tracking, workout logging, and social sharing to keep users motivated and connected.",
     imageUrl:
       "https://static.wixstatic.com/media/8121cd0609b8412497001bae77b1af31.jpg/v1/fill/w_490,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/8121cd0609b8412497001bae77b1af31.jpg",
-    techStack: ["cld", 'ts', 'mongodb', 'react'],
+    techStack: ["cld", "ts", "mongodb", "react"],
   },
 ];

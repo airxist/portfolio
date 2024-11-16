@@ -5,7 +5,8 @@ import Btn from "./Btn";
 import { mobile_nav_variant } from "../../constants/variants";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import { LockScroll, UnlockScroll } from "../../lib/utils/scroll-lock";
+import { LockScroll, UnlockScroll } from "../../lib/utils";
+
 
 const listItemVariant = {
   show: { y: 0, opacity: 1 },

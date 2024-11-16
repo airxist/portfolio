@@ -8,11 +8,17 @@ import Contact from "./components/contact/Contact";
 import { Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Anime from "./components/anime/Anime";
+import { Spotlight } from "./components/_ui/SpotLight";
 
 const App = () => {
   const location = useLocation();
   return (
-    <div className="mx-auto overflow-x-hidden max-w-screen-2xl">
+    <div className="relative mx-auto overflow-hidden overflow-x-hidden max-w-screen-2xl">
+      <Spotlight
+        className="left-0 -top-40 md:left-60 md:-top-20"
+        // fill="#4B0082"
+        fill="rgb(239, 212, 154)"
+      />
       <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
