@@ -2,12 +2,26 @@ import gmail from "../assets/icons/gmail.svg";
 import ig from "../assets/icons/gmail.svg";
 import linkedIn from "../assets/icons/linkedin.svg";
 import twitter from "../assets/icons/twitter.svg";
+import js from "../assets/icons/javascript.svg";
+import mongodb from "../assets/icons/mongodb.svg";
+import react from "../assets/icons/react.svg";
+import reactrouter from "../assets/icons/reactrouter.svg";
+import redux from "../assets/icons/redux.svg";
+import ts from "../assets/icons/typescript.svg";
+import cld from "../assets/icons/cloudinary.svg";
 
 export const icons = {
   gmail,
   ig,
   linkedIn,
   twitter,
+  js,
+  mongodb,
+  react,
+  reactrouter,
+  redux,
+  ts,
+  cld,
 };
 
 export const socialLinks = [
@@ -16,6 +30,8 @@ export const socialLinks = [
   { href: "http://linkedIn", icon: icons.linkedIn },
   { href: "http://x", icon: icons.twitter },
 ];
+
+export const welcomeText = "Hello";
 
 export const about_title = "A Bit About Me";
 
@@ -98,6 +114,7 @@ export const mockProjects = [
       "A comprehensive system to automate home appliances and security using IoT technology. This project integrates voice control, remote monitoring, and automated scheduling to enhance convenience and security.",
     imageUrl:
       "https://static.wixstatic.com/media/c837a6_871a4251d9874b0d8acfe66796caaaf8~mv2.jpg/v1/fill/w_491,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/brendan-church-9F3sEV1-Iog-unsplash.jpg",
+    techStack: ["ts", "react"],
   },
   {
     projectTitle: "E-commerce Website",
@@ -105,6 +122,7 @@ export const mockProjects = [
       "An online platform for buying and selling products. Features include product search, user reviews, secure payment gateways, and an intuitive user interface for a seamless shopping experience.",
     imageUrl:
       "https://static.wixstatic.com/media/11062b_6ddd2b6a939949a0acd0df3847b896bc~mv2.jpg/v1/fill/w_490,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/Fashion%20Magazine.jpg",
+    techStack: ["reactrouter", "redux", "js", "mongodb"],
   },
   {
     projectTitle: "Fitness Tracker App",
@@ -112,5 +130,6 @@ export const mockProjects = [
       "A mobile application that helps users track their fitness activities, set goals, and monitor progress. Includes features like GPS tracking, workout logging, and social sharing to keep users motivated and connected.",
     imageUrl:
       "https://static.wixstatic.com/media/8121cd0609b8412497001bae77b1af31.jpg/v1/fill/w_490,h_331,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/8121cd0609b8412497001bae77b1af31.jpg",
+    techStack: ["cld", 'ts', 'mongodb', 'react'],
   },
 ];

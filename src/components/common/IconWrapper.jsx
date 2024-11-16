@@ -5,15 +5,17 @@ const IconWrapper = ({
   containerStyle,
   iconElementProps,
   imageUrl,
+  imageStyle = 'object-cover object-center size-full',
+  iconStyle = {}
 }) => {
   return (
-    <div className={containerStyle}>
+    <div className={containerStyle} style={iconStyle}>
       {Icon && <Icon {...iconElementProps} />}
       {imageUrl && (
         <img
           src={imageUrl}
           alt="icon"
-          className="object-cover object-center size-full"
+          className={imageStyle}
         />
       )}
     </div>
