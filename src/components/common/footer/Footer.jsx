@@ -33,13 +33,13 @@ const Footer = () => {
           />
 
           <div className="flex items-center gap-x-4">
-            {/* {socialLinks.map((link) => {
+            {socialLinks.map((link) => {
               return (
                 <a href={link.href}>
                   <img src={link.icon} alt={link.href} className="size-5" />
                 </a>
               );
-            })} */}
+            })}
           </div>
         </div>
 
